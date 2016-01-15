@@ -10,9 +10,6 @@ RUN apk update \
 	php-mysqli php-pear php-pdo_mysql php-json \
 	php-pdo php-gd php-openssl php-iconv \
 	php-xml php-xsl php-fpm php-ctype \
-	# CLEAN CACHE
-	&& apk cache clean \
-	&& RUN rm -rf /var/cache/apk/*
 	# forward request and error logs to docker log collector
 	&& ln -sf /dev/stdout /var/log/php-fpm.log
 
