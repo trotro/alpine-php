@@ -15,4 +15,4 @@ RUN apk update \
 
 EXPOSE 9000
 
-CMD ["php-fpm","-F","-O","-R"]
+CMD ["php-fpm","-F"]
